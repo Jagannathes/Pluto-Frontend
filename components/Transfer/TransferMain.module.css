@@ -1,0 +1,49 @@
+.container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.container h2 span {
+  color: var(--prm-color);
+}
+.cateogry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.category__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+  font-size: 1rem;
+  background: var(--prm-color);
+  color: #fff;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.category__box span {
+  font-size: 2.5rem;
+}
+.category__filter {
+  padding-bottom: 4rem;
+  display: flex;
+
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+@media (max-width: 520px) {
+  .category__box {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+  }
+  .category__box span {
+    font-size: 1.5rem;
+  }
+}
