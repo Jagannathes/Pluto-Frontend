@@ -1,28 +1,31 @@
+import React, { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import styles from './faqs.module.css'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Faqs() {
     const [faqs, setFaqs] = useState([
         {
             open: false,
-            question: 'Can fresh beginners join the stock market membership program?',
-            answer: `Absolutely! You can start from the ground-up and learn all about stock trading and still benefit from our program. The basics are vital in the learing process and the sooner you learn it right, the more consistent the results.`,
+            question: 'Lorem ipsum dolor sit amet, consectetur adipiscing ?',
+            answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
         },
         {
             open: false,
-            question: 'What is the duration of the programs?',
-            answer: `The Programs lasts for 4 to 8 weeks. Once in, the students received One year access to loads of resources, live support and a community to help excel.`,
+            question: 'Lorem ipsum dolor sit amet, consectetur adipiscing ?',
+            answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
         },
         {
             open: false,
-            question: 'What do I require to start trading?',
-            answer: `Trading doesn't ask for a lot. An internet connected device, a demat account with at least 500/- in funds and the spark for financial freedom! We recommended Zerodha and Angel Broking for Indian Markets, due to low brokerages and excellent customer support.`,
+            question: 'Lorem ipsum dolor sit amet, consectetur adipiscing ?',
+            answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
         },
         {
             open: false,
-            question: 'How do I pay fees for the courses?',
-            answer: `We accept all credit cards, debit cards and UPI. International clients can use Razorpay or Paypal.`,
+            question: 'Lorem ipsum dolor sit amet, consectetur adipiscing ?',
+            answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
         },
     ])
 
@@ -33,10 +36,13 @@ export default function Faqs() {
         })
         setFaqs(temp)
     }
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
 
     return (
 
-        <div className={styles['faqs']}>
+        <div data-aos="fade-up" className={styles['faqs']}>
             <div className={styles['heading-wrapper']}>
                 <h2><span>F</span>requently <span>A</span>sked <span>Q</span>uestions</h2>
 

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Section2.module.css'
 import { BsArrowRightCircleFill } from 'react-icons/bs'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const data = [{
     title1: 'CARD',
     pt1: 'Get Virtual and Physical card',
@@ -32,16 +33,19 @@ const data = [{
 }]
 
 function Section2() {
+    useEffect(() => {
+        Aos.init({ duration: 1500 })
+    }, [])
     return (
         <div className={styles.sec2}>
             {data.map((datas) => (
                 <>
                     <div className={styles.card1}>
-                        <div className={styles.card1__left}>
+                        <div data-aos="fade-right" className={styles.card1__left}>
                             <img src={datas.img1} alt="" />
 
                         </div>
-                        <div className={styles.card1__right}>
+                        <div data-aos="fade-left" className={styles.card1__right}>
                             <h2>Pluto <span>{datas.title1}</span></h2>
                             <ul>
                                 <li>{datas.pt1}</li>
@@ -56,10 +60,10 @@ function Section2() {
                         </div>
                     </div>
                     <div className={styles.card2}>
-                        <div className={styles.card1__left}>
+                        <div data-aos="fade-left" className={styles.card1__left}>
                             <img src={datas.img2} alt="" />
                         </div>
-                        <div className={styles.card1__right}>
+                        <div data-aos="fade-right" className={styles.card1__right}>
                             <h2>Pluto <span>{datas.title2}</span></h2>
                             <ul>
                                 <li>{datas.pt4}</li>

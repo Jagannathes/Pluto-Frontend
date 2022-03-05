@@ -4,6 +4,8 @@ import { FaGooglePlay, FaApple } from 'react-icons/fa'
 import Lottie from 'lottie-web'
 // import * as Bank from '../lotties/homeAnime.json'
 import Bank from '../lotties/bank.json'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const dwld = [{
     icon: <FaGooglePlay />,
@@ -15,6 +17,10 @@ const dwld = [{
 }]
 
 function MainPage() {
+
+    useEffect(()=>{
+        Aos.init({duration:1500})
+    },[])
     const container = useRef(null)
     useEffect(() => {
         Lottie.loadAnimation({
@@ -31,7 +37,7 @@ function MainPage() {
 
     return (
 
-        <div className={styles.Main}>
+        <div data-aos="fade-down" className={styles.Main}>
 
             <div className={styles.main__head}>
 
