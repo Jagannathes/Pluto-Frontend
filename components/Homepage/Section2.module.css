@@ -1,6 +1,6 @@
 .sec2 {
   height: 100%;
-
+  font-family: var(--sec-font);
   padding: 0 5rem;
 }
 .card1 {
@@ -16,10 +16,12 @@
   justify-content: space-evenly;
 }
 .card1__right h2 {
+  font-family: var(--prm-font);
   font-size: 3rem;
   text-align: center;
 }
 .card1__right span {
+  font-family: var(--sec-font);
   font-style: italic;
   color: var(--prm-color);
 }

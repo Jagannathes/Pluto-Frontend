@@ -1,6 +1,7 @@
 .sec1 {
   margin-top: 5rem;
   height: 100%;
+  font-family: var(--sec-font);
 }
 .sec1__box1 {
   background: #f4f4f4;

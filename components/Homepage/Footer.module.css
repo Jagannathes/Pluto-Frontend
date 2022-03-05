@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 6rem 7rem;
+  font-family: var(--sec-font);
 }
 
 .left {
@@ -15,6 +16,9 @@
 .copyright {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.3);
+}
+.copyright span {
+  font-family: var(--prm-font);
 }
 
 .right {

@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Scada&display=swap");
+
 :root {
   --prm-color: #3b6ae5;
   --sec-color: #eff1f2;
   --ter-color: #94a6ca;
+  --prm-font: "Rammetto One";
+  --sec-font: "Scada";
 }
 
 html,
