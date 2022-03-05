@@ -109,6 +109,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 export default function MiniDrawer() {
+  const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
   const isMobileView = useMediaQuery('(max-width:600px)');
   const [open, setOpen] = React.useState(false);
 
@@ -151,6 +152,7 @@ export default function MiniDrawer() {
             </Stack>
         </Toolbar>
       </AppBar>
+      <Offset />
     { !isMobileView &&   <Drawer variant="permanent" color = "white" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
