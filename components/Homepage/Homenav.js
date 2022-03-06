@@ -18,7 +18,9 @@ function Homenav({ user, userLoading, logout }) {
                 <a>{user && "Profile"}</a>
               </Link>
             </li>
-            <li>{user}</li>
+            <li onClick={logout}>
+                {user && "Logout"}
+            </li>
             <li>
               <Link href="/createAccount">
                 <a>{user === null && "Create Account"}</a>
