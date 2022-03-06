@@ -30,6 +30,11 @@
   justify-content: space-between;
   margin-right: 1rem;
   font-weight: bold;
+  text-decoration: none;
+}
+.nav__right ul li a {
+  text-decoration: none;
+  color: black;
 }
 .nav__right ul li span {
   color: var(--prm-color);
