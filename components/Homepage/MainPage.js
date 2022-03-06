@@ -6,6 +6,8 @@ import Lottie from 'lottie-web'
 import Bank from '../lotties/bank.json'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { useContext } from "react";
+import UserContext from "../../context/user/UserContext";
 
 const dwld = [{
     icon: <FaGooglePlay />,
@@ -17,6 +19,12 @@ const dwld = [{
 }]
 
 function MainPage() {
+    const { user, userLoading, userError, logout } = useContext(UserContext);
+
+    useEffect(()=>{
+        console.log("User: ", user);
+        console.log("UserLoading: ", userLoading);
+    },[user,userLoading]);
 
     useEffect(() => {
         Aos.init({ duration: 1500 })
