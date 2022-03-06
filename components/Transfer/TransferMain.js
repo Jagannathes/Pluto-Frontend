@@ -38,7 +38,7 @@ const data = [{
 }]
 
 function TransferMain() {
-    const [category, setCategory] = useState('To A/C')
+    const [category, setCategory] = useState('To A/c')
 
     // const handleClick = ()=>{
     //     setCategory()
