@@ -21,6 +21,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Avatar, Stack } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 const drawerWidth = 240;
 
@@ -167,6 +169,36 @@ export default function MiniDrawer() {
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
               }}
+              onClick = {() => {
+                window.location.href = '/';
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+             
+              
+              >
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary = "Home" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          
+        </List>
+        <List>
+        <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+
+              }}
+              onClick = {() => {
+                window.location.href = '/transfer';
+              }}
             >
               <ListItemIcon
                 sx={{
@@ -175,12 +207,39 @@ export default function MiniDrawer() {
                   justifyContent: 'center',
                 }}
               >
-                <HomeIcon />
+                <CompareArrowsIcon />
               </ListItemIcon>
-              <ListItemText primary = "home" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary = "Transfer" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           
         </List>
+        <List>
+        <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+              onClick = {() => {
+                window.location.href = '/dashboard';
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+             
+              
+              >
+                <DashboardIcon />
+              </ListItemIcon>
+              <ListItemText primary = "DashBoard" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          
+        </List>
+        
        
       </Drawer> }
       
