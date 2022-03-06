@@ -3,6 +3,10 @@ import { useState, useEffect} from 'react'
 import CreditCards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css';
 
+
+
+
+
 function creditCard() {
 
     const [number, setNumber] = useState('');
@@ -26,6 +30,7 @@ function creditCard() {
                 issuer = {'visa'}
                 preview = {isPreview}
             />
+           
       </>
   )
 }
