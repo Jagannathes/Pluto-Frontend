@@ -12,8 +12,8 @@ function DashBoard() {
   return (
     <>
         <NavBar />
-        <Container maxWidth="xl" sx={{ mt: 2 }}>
-        <Box sx={{ flexGrow: 1 }}>
+        <Container maxWidth="lg" sx={{ mt: 2 }}>
+        <Box sx={{ flexGrow: 1,  }}>
           <Grid
             container
             spacing={{ xs: 2, md: 3 }}

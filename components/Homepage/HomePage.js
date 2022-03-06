@@ -6,6 +6,9 @@ import Section1 from './Section1'
 import Section2 from './Section2'
 import Homenav from './Homenav'
 import UserContext from "context/user/UserContext";
+import  NavBar  from  '@components/NavBar/NavBar'
+import BottomNavBar from '@components/BottomNavigation/BottomNavBar'
+import Container from '@mui/material/Container'
 
 function HomePage() {
     const { user, userLoading, userError, logout } = useContext(UserContext);
@@ -16,12 +19,15 @@ function HomePage() {
     }, [user, userLoading]);
     return (
         <div>
-            <Homenav loading={userLoading} user={user} logout={logout} />
+        <Container min-width="lg"> 
+           <NavBar />
             <MainPage />
             <Section1 />
             <Section2 />
             <Faqs />
             <Footer />
+            <BottomNavBar />
+         </Container>
         </div>
     )
 }

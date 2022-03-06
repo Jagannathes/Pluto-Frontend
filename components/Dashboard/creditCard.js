@@ -2,8 +2,8 @@ import React from 'react'
 import { useState, useEffect} from 'react'
 import CreditCards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css';
-
-
+import Paper from '@mui/material/Paper'
+import Box from '@mui/material/Box'
 
 
 
@@ -21,15 +21,20 @@ function creditCard() {
 
   return (
       <>
+      <Paper>
             <CreditCards
-                cvc={cvc}
-                expiry={expiry}
+               name="John Smith"
+               number="5555 4444 3333 1111"
+               expiry="10/20"
+                cvc="737"
+               
                 focus={focus}
-                name={name}
-                number={number}
+                
                 issuer = {'visa'}
                 preview = {isPreview}
             />
+            
+            </Paper>
            
       </>
   )
