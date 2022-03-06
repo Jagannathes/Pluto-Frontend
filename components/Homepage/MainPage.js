@@ -19,12 +19,7 @@ const dwld = [{
 }]
 
 function MainPage() {
-    const { user, userLoading, userError, logout } = useContext(UserContext);
-
-    useEffect(()=>{
-        console.log("User: ", user);
-        console.log("UserLoading: ", userLoading);
-    },[user,userLoading]);
+    
 
     useEffect(() => {
         Aos.init({ duration: 1500 })
