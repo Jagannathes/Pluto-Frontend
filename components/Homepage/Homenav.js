@@ -13,11 +13,15 @@ function Homenav({ user, userLoading, logout }) {
           ""
         ) : (
           <ul>
-            <li>{user && "Profile"}</li>
+            <li>
+              <Link href="/dashboard">
+                <a>{user && "Profile"}</a>
+              </Link>
+            </li>
             <li>{user}</li>
             <li>
               <Link href="/createAccount">
-                {user === null && "Create Account"}
+                <a>{user === null && "Create Account"}</a>
               </Link>
             </li>
             <li>
