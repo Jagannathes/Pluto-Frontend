@@ -18,7 +18,7 @@ const data = [{
 
 function Section1() {
     return (
-        <div className={styles.sec1}>
+        <div id="benefits" className={styles.sec1}>
 
             <div className={styles.sec1__box1}>
                 <p>Since <span>3+ Years</span></p>
