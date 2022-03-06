@@ -25,7 +25,9 @@ function Homenav({ user, userLoading, logout }) {
               </Link>
             </li>
             <li>
-              <span>{user === null && "Login"}</span>
+              <Link href="/login">
+                <span>{user === null && "Login"}</span>
+              </Link>
             </li>
           </ul>
         )}
