@@ -19,24 +19,26 @@ import { getAuth, RecaptchaVerifier , signInWithPhoneNumber} from "firebase/auth
 
 function PhoneInput({setStep, setConfirmationResult}) {
 
-
-    
-
-
     const auth = getAuth();
-    let appVerifier
-    if(typeof window !== 'undefined')
-    {
-        window.recaptchaVerifier = new RecaptchaVerifier('nextButton', {
-        'size': 'invisible',
-        'callback': (response) => {
-            // reCAPTCHA solved, allow signInWithPhoneNumber.
-            onSignInSubmit();
-        }
-        }, auth);
+    useEffect(()=>{
+        if(auth)
+        {
+            if(typeof window !== 'undefined')
+            {
+                window.recaptchaVerifier = new RecaptchaVerifier('nextButton', {
+                'size': 'invisible',
+                'callback': (response) => {
+                    // reCAPTCHA solved, allow signInWithPhoneNumber.
+                    onSignInSubmit();
+                }
+                }, auth);
 
-        appVerifier = window.recaptchaVerifier;
-    }
+                appVerifier = window.recaptchaVerifier;
+            }
+        }
+    },[auth]);
+    let appVerifier;
+    
     const [phoneNumber, setPhoneNumber] = useState(null);
     const [loading, setLoading] = useState(false);
     function handlePhoneInput(value){
