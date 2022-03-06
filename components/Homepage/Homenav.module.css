@@ -33,6 +33,7 @@
 }
 .nav__right ul li span {
   color: var(--prm-color);
+  text-decoration: none;
 }
 .dwnld {
   background: black;
