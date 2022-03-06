@@ -1,33 +1,29 @@
-import React, { Component } from 'react'
-import QRScan from 'qrscan'
-import styles from './Scanner.module.css'
-export default class Scanner extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { value: '', watching: false }
-        this.onFind = this.onFind.bind(this)
-    }
+import { width } from '@mui/system';
+import React, { useEffect, useState } from 'react'
 
-    onFind(value) {
-        this.setState({ value, watching: false })
-    }
+function Scanner() {
 
-    render() {
-        return (
-            <div className={styles.container}>
-                <h4>Scan QR Code</h4>
-                {this.state.watching
-                    ? (
-                        <QRScan onFind={this.onFind} />
-                    )
-                    : (
-                        <>
-                            <button className={styles.btn} onClick={() => this.setState({ watching: true })}>Scan</button>
-                            {/* <h5>value: {this.state.value}</h5> */}
-                        </>
-                    )
-                }
-            </div>
-        )
-    }
+
+    const [size, setSize] = useState(window.innerWidth);
+
+    useEffect(() => {
+        setSize(window.innerWidth)
+    }, [size])
+
+    return (
+        <div>
+
+            {size > 1000 ? (
+                <input type="file" accept='image/*' capture="user" name="" id="" />
+            ) : (
+
+
+                <input type="file" accept='image/*' capture="environment" name="" id="" />
+            )}
+
+
+        </div>
+    )
 }
+
+export default Scanner

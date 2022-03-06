@@ -4,7 +4,7 @@ import { MdQrCodeScanner, MdAccountBox, MdOutlineSync } from 'react-icons/md'
 import { AiOutlineBank } from 'react-icons/ai'
 import { SubtitlesOutlined } from '@mui/icons-material'
 import Transfertype from './Transfertype'
-// import Scanner from './Scanner'
+import Scanner from './Scanner'
 
 const data = [{
     type: 'Scan',
@@ -61,14 +61,14 @@ function TransferMain() {
 
             {category === 'Scan' ? (
                 <div className={styles.category__filter}>
-                   {/* <Scanner /> */}
+                    <Scanner />
                 </div>
             ) : (
                 <div className={styles.category__filter}>
                     <Transfertype data={data} category={category} />
                 </div>
             )}
-          
+
 
         </div>
     )
