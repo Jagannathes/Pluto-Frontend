@@ -42,7 +42,7 @@ export default function Faqs() {
 
     return (
 
-        <div data-aos="fade-up" className={styles['faqs']}>
+        <div id='faq' data-aos="fade-up" className={styles['faqs']}>
             <div className={styles['heading-wrapper']}>
                 <h2><span>F</span>requently <span>A</span>sked <span>Q</span>uestions</h2>
 

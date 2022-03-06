@@ -18,9 +18,9 @@ const dwld = [{
 
 function MainPage() {
 
-    useEffect(()=>{
-        Aos.init({duration:1500})
-    },[])
+    useEffect(() => {
+        Aos.init({ duration: 1500 })
+    }, [])
     const container = useRef(null)
     useEffect(() => {
         Lottie.loadAnimation({
@@ -37,7 +37,7 @@ function MainPage() {
 
     return (
 
-        <div data-aos="fade-down" className={styles.Main}>
+        <div id="home" data-aos="fade-down" className={styles.Main}>
 
             <div className={styles.main__head}>
 

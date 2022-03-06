@@ -74,7 +74,7 @@ function Transfertype({ category }) {
                                 </div>
                                 <div className={styles.type__amount}>
                                     <p>Enter Pluto PIN</p>
-                                    <input type="number" name="" id="" />
+                                    <input type="password" name="" id="" />
                                 </div>
                                 <input type="button" className={styles.btn} value="Pay" />
                             </div>
